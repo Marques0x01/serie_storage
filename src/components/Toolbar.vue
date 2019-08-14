@@ -6,22 +6,14 @@
                 <v-layout align-center @click="$router.push('/')" style="cursor: pointer">
                     <v-img
                         :src="require('@/assets/logo.jpeg')"
-                        height="40"
-                        width="40"
-                        max-width="40"
+                        height="30"
+                        width="30"
+                        max-width="30"
                         style="border-radius: 30px"
                     />
-                    <v-toolbar-title>Work Front-End</v-toolbar-title>
+                    <v-toolbar-title class="subtitle-1">Work Front-End</v-toolbar-title>
                 </v-layout>
                 <v-spacer />
-                <v-text-field
-                    append-icon="search"
-                    flat
-                    hide-details
-                    solo-inverted
-                    style="max-width: 300px;"
-                    class="align-center"
-                />
                 <v-btn
                     class="ml-0 hidden-sm-and-down"
                     flat
@@ -29,16 +21,16 @@
                     v-for="(option,key) in options"
                     :key="key"
                 >
-                    <v-icon left size="35">{{option.icon}}</v-icon>
-                    <span class="subheading font-weight-bold">{{option.title}}</span>
+                    <v-icon left size="20">{{option.icon}}</v-icon>
+                    <span class="subtitle-1 font-weight-bold">{{option.title}}</span>
                 </v-btn>
                 <v-btn class="ml-0 hidden-sm-and-down" flat left>
-                    <v-icon left size="35">account_circle</v-icon>
-                    <span class="subheading font-weight-bold">{{userProfile.name}}</span>
+                    <v-icon left size="20">account_circle</v-icon>
+                    <span class="subtitle-1 font-weight-bold">{{userProfile.name}}</span>
                 </v-btn>
                 <v-btn class="ml-0 hidden-sm-and-down" flat left @click="onLogout()">
-                    <v-icon left size="35">account_circle</v-icon>
-                    <span class="subheading font-weight-bold">Logout</span>
+                    <v-icon left size="20">account_circle</v-icon>
+                    <span class="subtitle-1 font-weight-bold">Logout</span>
                 </v-btn>
             </v-layout>
         </v-toolbar>

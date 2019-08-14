@@ -59,13 +59,3 @@ body {
 .v-chip.INTERRUPTED {
   background: rgb(243, 7, 7);
 }
-
-
-// ACCOUNT DIALOG
-.login-text-button {
-  text-decoration: none;
-  cursor: pointer;
-  &:hover {
-    text-decoration: underline;
-  }
-}

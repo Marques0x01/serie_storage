@@ -4,10 +4,10 @@
             <v-flex xs12 sm8 md6>
                 <v-card class="login-card">
                     <v-toolbar dark>
-                        <v-toolbar-title>Login In to Your Account</v-toolbar-title>
+                        <v-toolbar-title class="subtitle-2">Login In to Your Account</v-toolbar-title>
                     </v-toolbar>
-                    <v-form class="ma-4 pa-2">
-                        <v-text-field
+                    <v-form class="pa-4">
+                        <v-text-field size="sm"
                             name="email"
                             :rules="[rules.required]"
                             :append-icon="'person'"
@@ -35,18 +35,20 @@
                                 @keydown.enter="onLogin()"
                             >Login</v-btn>
                         </v-flex>
-                        <router-link
-                            to="/recover-account"
-                            class="text-xs-right font-weight-bold login-text-button"
-                        >
-                            <v-card-text>Forgot Username / Password ?</v-card-text>
-                        </router-link>
-                        <router-link
-                            to="/sign-up"
-                            class="font-weight-bold text-xs-center login-text-button"
-                        >
-                            <v-card-text>Don't have an account ? Sing Up</v-card-text>
-                        </router-link>
+                        <v-flex xs12 md12 sm12>
+                            <router-link
+                                to="/recover-account"
+                                class=" font-weight-bold login-text-button"
+                            >
+                                <v-card-text>Forgot Username / Password ?</v-card-text>
+                            </router-link>
+                            <router-link
+                                to="/sign-up"
+                                class="font-weight-bold login-text-button"
+                            >
+                                <v-card-text>Don't have an account ? Sing Up</v-card-text>
+                            </router-link>
+                        </v-flex>
                     </v-form>
                 </v-card>
             </v-flex>
@@ -83,3 +85,13 @@ export default {
     }
 };
 </script>
+
+<style lang="scss" scoped>
+.login-text-button {
+    text-decoration: none;
+    cursor: pointer;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+</style>
